@@ -51,8 +51,8 @@ public abstract class Livro {
         this.ano = ano;
     }
 
-    public String getId() {
-        return id;
+    public String getId(String id) {
+        return this.id;
     }
 
     public void setId(String id) {

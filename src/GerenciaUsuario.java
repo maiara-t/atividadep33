@@ -8,11 +8,16 @@ public class GerenciaUsuario extends Usuario{
         super();
         this.cadastros = new ArrayList();
     }
-  
 
+    private boolean cadrastroExistente(String cpf) {
+        if (getCpf(cpf) == null) {
+            return false;
+        }
+        return true;
+    }
 
       public void cadastroDeUsuario (String nome, String senha, String cpf) {
-          if (!contaExistente(cpf)) {
+          if (!cadastroExistente(cpf)) {
               cadastros.add(new Usuario(nome, senha, cpf) {
               });
           }

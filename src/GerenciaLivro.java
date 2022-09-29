@@ -10,8 +10,8 @@ public class GerenciaLivro extends Livro {
     }
 
 
-    private boolean cadrastroExistente(String cpf) {
-        if (getUsuario(cpf) == null) {
+    private boolean cadrastroExistente(String id) {
+        if (getId(id) == null) {
             return false;
         }
         return true;
